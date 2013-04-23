@@ -36,6 +36,8 @@ public class OpenApiClientIntegration {
     private OpenApiClient openApiClient;
     @Before
     public void setUp() throws Exception {
+        Assert.assertFalse("Oeps, ACCESS_KEY_ID not assigned!!!111oneone!", StringUtils.isEmpty(ACCESS_KEY_ID));
+        Assert.assertFalse("Oeps, SECRET_ACCESS_KEY not assigned!!!111oneone!", StringUtils.isEmpty(SECRET_ACCESS_KEY));
         uri = new URI("https://openapi.bol.com");
         openApiClient = new OpenApiClient(new DefaultHttpClient(), uri, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
     }
