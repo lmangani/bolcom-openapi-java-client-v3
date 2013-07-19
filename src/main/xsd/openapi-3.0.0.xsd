@@ -62,6 +62,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Default" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="AllowAcceptgiro" minOccurs="0" maxOccurs="1" type="xs:boolean"/>
                 <xs:element ref="BankAccount" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="IDealBanks" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="DirectDebitBankAccounts" minOccurs="0" maxOccurs="unbounded"/>
@@ -418,7 +419,8 @@
             <xs:enumeration value="garden"/>
             <xs:enumeration value="tools"/>
             <xs:enumeration value="pgt"/>
-			<xs:enumeration value="las"/>
+            <xs:enumeration value="las"/>
+            <xs:enumeration value="sto"/>
             <xs:enumeration value="unknown"/>
         </xs:restriction>
     </xs:simpleType>
@@ -475,6 +477,7 @@
                 <xs:element name="PhoneNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="AddressLine1" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="AddressLine2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="SellerType" type="xs:string" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
